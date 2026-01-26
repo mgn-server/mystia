@@ -1,0 +1,3 @@
+[submodule "mystia-lib"]
+	path = mystia-lib
+	url = https://github.com/mgn-server/mystia-lib.git
