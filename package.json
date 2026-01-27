@@ -1,0 +1,25 @@
+{
+  "name": "mystia",
+  "version": "1.0.0",
+  "description": "Idéia: criar uma lib bot discord do zero sem vibe codar nem nada.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notigorwastaken/mystia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/notigorwastaken/mystia/issues"
+  },
+  "homepage": "https://github.com/notigorwastaken/mystia#readme",
+  "devDependencies": {
+    "dotenv": "^17.2.3",
+    "eslint": "^9.39.2"
+  }
+}
