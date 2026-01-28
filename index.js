@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const path = require('node:path');
-const { Client, Intents, VoiceConnection, VoiceConnectionManager, setupCommandHandler } = require('./mystia-lib/dist/index');
+const { Client, Intents, VoiceConnection, VoiceConnectionManager, setupCommandHandler, delay } = require('./mystia-lib/dist/index');
 const client = new Client({
     token: process.env.TOKEN,
     intents: Intents.ALL,
@@ -20,7 +20,12 @@ async function initBot() {
         if (message.author.bot) return;
         const parsed = handler.parseMessage(message);
         if(!parsed.isCommand) return;
-        if(!parsed.command) return;
+        if(!parsed.command) {
+             const msg = await message.reply("Este comando não existe.");
+             await delay(2000);
+             msg.delete();
+             return;
+        }
         
         await parsed.command.execute({
             message,
